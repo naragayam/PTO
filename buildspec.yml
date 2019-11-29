@@ -1,10 +1,13 @@
----
-- name: AWS CICD buildspec
-  hosts: localhost
+version: 0.2
 
-  become: True
-  tasks:
-     - name: coping file, airflow.conf
-       command: echo hello
-
-     
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+  build:
+    commands:
+     - echo Building the Docker image...
+  post_build:
+    commands: 
+      - echo Pushing the Docker images...
