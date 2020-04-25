@@ -11,4 +11,4 @@ phases:
   post_build:
     commands: 
       - echo Pushing the Docker images...
-      - echo "find the way"
+      - echo "find the Way"
