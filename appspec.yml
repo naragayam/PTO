@@ -10,9 +10,6 @@ hooks:
   AfterInstall:
     - location: /usr/bin/pwd
       timeout: 180
-  ApplicationStart:
-    - location: /usr/bin/pwd
-      timeout: 3600
   ValidateService:
     - location: /usr/bin/pwd
       timeout: 3600
