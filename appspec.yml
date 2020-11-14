@@ -17,3 +17,12 @@ hooks:
     - location: /usr/bin/pwd
       timeout: 3600
       runas: codedeployuser
+  ApplicationStop:
+    - location: /usr/bin/ls -al /opt
+      timeout: 3600
+      runas: codedeployuser
+  ApplicationStart:
+    - location: /usr/bin/ls -al /opt
+      timeout: 3600
+      runas: codedeployuser
+
