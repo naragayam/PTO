@@ -15,8 +15,8 @@ hooks:
       timeout: 3600
       runas: codedeployuser
   ApplicationStop:
-    - location: /usr/bin/ls -al /opt
-      timeout: 3600
+    - location: /home/ec2-user/application_stop.sh 
+      timeout: 30
       runas: codedeployuser
   ApplicationStart:
     - location: /usr/bin/ls -al /opt
