@@ -1,5 +1,19 @@
 version: 0.0
 os: linux
 files:
-  - source: .
-    destination: /opt
+  - source: /
+    destination: /home/ec2-user
+hooks:
+  BeforeInstall:
+    - location: /usr/bin/pwd
+      timeout: 180
+  AfterInstall:
+    - location: /usr/bin/pwd
+      timeout: 180
+  ApplicationStart:
+    - location: /usr/bin/pwd
+      timeout: 3600
+  ValidateService:
+    - location: /usr/bin/pwd
+      timeout: 3600
+      runas: codedeployuser
